@@ -5,10 +5,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import com.dominos.utils.Configuration;
+
 public class DominosLoginPage extends DominosBasePageObject {
 
 	private static DominosLoginPage instance;
 	protected static Object lock = new Object();
+	
 
 	public DominosLoginPage(AndroidDriver driver) {
 		super(driver);
@@ -39,8 +42,8 @@ public class DominosLoginPage extends DominosBasePageObject {
 		}
 		
 //		FindWebElementById("android:id/home").click();
-		FillInputFieldByUIAutomator("android.widget.EditText",1,"canberkakduygu@gmail.com");
-		FillInputFieldByUIAutomator("android.widget.EditText",2,"Keytorc12");
+		FillInputFieldByUIAutomator("android.widget.EditText",1,conf.getUsername());
+		FillInputFieldByUIAutomator("android.widget.EditText",2,conf.getPassword());
 		FindWebElementByIndex(5).click();
 		
 		return new DominosHomePage(driver);

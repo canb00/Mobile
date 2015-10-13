@@ -14,6 +14,8 @@ public class Configuration {
 	private String appActivity;
 	private String appPackage;
 	private String appiumURL;
+	private String username;
+	private String password;
 	
 	public String getActivityName() {
 		return appActivity;
@@ -77,6 +79,23 @@ public class Configuration {
 		this.appiumURL = appiumURL;
 	}
 
+	
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
 	private Configuration() {
 	}
 
@@ -104,5 +123,8 @@ public class Configuration {
 		platformName = props.getProperty("platformName");
 		appPackage = props.getProperty("appPackage");
 		appiumURL = props.getProperty("appiumURL");
+		username = props.getProperty("username");
+		password = props.getProperty("password");
+				
 	}
 }
