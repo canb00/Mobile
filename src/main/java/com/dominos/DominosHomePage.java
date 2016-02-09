@@ -43,7 +43,7 @@ public class DominosHomePage extends DominosBasePageObject {
 	
 	public PizzasPages openPizzaPage(){
 		try {
-			Thread.sleep(10000);
+			Thread.sleep(15000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

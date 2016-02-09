@@ -35,7 +35,7 @@ public class PizzasPages extends DominosBasePageObject {
 	
 	public PizzaDetailPage selectPizza(){
 		try {
-			Thread.sleep(5000);
+			Thread.sleep(15000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
